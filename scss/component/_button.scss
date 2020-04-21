@@ -1,0 +1,30 @@
+// Button Styles
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color .3s ease-out;
+  @include mq($break-l) {
+    padding: 10px 30px;
+  }
+}
+
+@each $button, $color in $button-colors {
+  .#{$button} {
+    background-color: $color;
+    &:hover {
+      background-color: lighten($color, 15%)
+    }
+  }
+}
+
+.btn + .btn {
+  @include mq($break-l) {
+    margin-left: 10px;
+  }
+}

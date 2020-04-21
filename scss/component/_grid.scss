@@ -1,0 +1,61 @@
+// Grid Styles
+
+.container {
+  padding: 0 10px;
+  @include mq($break-l) {
+    max-width: 1400px;
+    @include center;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 10px;
+  @include mq($break-l) {
+    flex-direction: row;
+  }
+}
+
+.centered {
+  @include mq($break-l) {
+    @include center;
+  }
+}
+
+[class^=col] {
+  margin-top: 10px;
+  flex-basis: 100%;
+  min-height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  @include mq($break-l) {
+    & {
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      align-items: center;
+      & + & {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@each $theme-col, $color in $col-colors {
+  .theme.#{$theme-col} {
+    background-color: $color;
+  }
+}
+
+.card {
+  flex-basis: 100%;
+}
+
+@include mq($break-l) {
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      flex-basis: $i * 8.33%;
+    }
+  }
+}

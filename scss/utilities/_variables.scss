@@ -1,0 +1,43 @@
+// Brand Colors
+
+$color-primary: #777;
+$color-secondary: #58e1c1;
+$color-accent: #51ddfc;
+
+$color-success: #63cc82;
+$color-error: #e4757a;
+$color-warning: #fd7856;
+$color-info: #927bc1;
+
+// Brand Fonts
+
+$font-primary: 'Lato', sans-serif;
+
+// Media Breakpoints
+
+$break-l: 768px;
+
+// Maps
+
+$button-colors: (
+  'default': $color-accent,
+  'success': $color-success,
+  'error': $color-error,
+  'warning': $color-warning,
+  'info': $color-info
+);
+
+$col-colors: (
+  'col-1': #927BC1,
+  'col-2': #fd7856,
+  'col-3': #deb2ee,
+  'col-4': #7ee6fd,
+  'col-5': #88d9a0,
+  'col-6': #4da2bb,
+  'col-7': #ec9fa3,
+  'col-8': #fd9f85,
+  'col-9': #e4757a,
+  'col-10': #63cc82,
+  'col-11': #51ddfc,
+  'col-12': #80e8d1
+)
